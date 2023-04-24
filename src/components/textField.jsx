@@ -1,6 +1,6 @@
 import { Input } from "antd"
 
-export default function textField() {
+export default function TextField() {
 
     const handleAdd = async (value) => {
         if (value.length <4) return 
