@@ -11,8 +11,8 @@ export default function Result( {setShowResult, result, loading, setLoading}) {
     }, [])
     return(
         <section>
-             <h2>Result</h2>
-             <p> {result}</p>
+             <h2> {result ? 'Result' : ''}</h2>
+             <p> {result ? result : ''}</p>
         </section>
     )
 }
