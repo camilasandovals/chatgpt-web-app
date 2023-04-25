@@ -1,7 +1,9 @@
 import { Input } from "antd"
+import { useState } from 'react'
 
-export default function TextField() {
-
+export default function AskChat() {
+    
+    const [result, setShowResult] = useState()
     const handleAdd = async (value) => {
         if (value.length <4) return 
        
@@ -13,11 +15,18 @@ export default function TextField() {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(newRequest),
-        })
-        const data = await response.json()
-
+            body: JSON.stringify(newRequest), 
+    })
+        const datos = await response.json()
+        console.log(datos)
+        console.log(datos.data)
+        setShowResult(datos.data)
     }
+
+    if(result) {
+        return <p> {result}</p>
+    }
+
     return (
         <section>
         
@@ -28,6 +37,9 @@ export default function TextField() {
             onSearch={handleAdd}
             placeholder="Write your condern here"
             />
+
+            
+           
     
         </section>
     

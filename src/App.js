@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/Header';
 import Indications from './components/Indications';
 import Result from './components/Result';
-import TextField from './components/TextField';
+import AskChat from './components/AskChat';
 
 function App() {
   return (
@@ -10,9 +10,8 @@ function App() {
       <body className="App-container">
         <Header />
         <Indications />
-        <TextField />
-  
-        <Result />
+        <AskChat />
+        {/* <Result /> */}
         
       </body>
     </div>
