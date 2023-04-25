@@ -1,12 +1,14 @@
 import { Input } from "antd"
 import { useState } from 'react'
 
-export default function AskChat() {
+export default function AskChat( {setShowResult, setLoading}) {
     
-    const [result, setShowResult] = useState()
+    
     const handleAdd = async (value) => {
         if (value.length <4) return 
        
+        setLoading(true)
+        
         const newRequest = {
             prompt: value
         }
@@ -21,10 +23,6 @@ export default function AskChat() {
         console.log(datos)
         console.log(datos.data)
         setShowResult(datos.data)
-    }
-
-    if(result) {
-        return <p> {result}</p>
     }
 
     return (
