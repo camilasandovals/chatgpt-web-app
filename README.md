@@ -4,3 +4,7 @@ Built with express, node.js and React.
 
 ![screen](./public/images/screen.png)
 ![screen2](./public/images/screen2.png)
+
+Useful articles
+
+click [here](https://platform.openai.com/docs/introduction)
